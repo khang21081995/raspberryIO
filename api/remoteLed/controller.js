@@ -6,14 +6,18 @@ var board = new five.Board({
     io: new Raspi()
 });
 var led;
-board.on("ready", function() {
+board.on("ready", function () {
     led = new five.Led("P1-13");
 });
 module.exports = {
     onLed: function (req, res) {
-            led.on();
+        led.on();
+        console.log("on led");
+        res.json({message: "Led: ON"});
     },
     offLed: function (req, res) {
-            led.off();
+        led.off();
+        console.log("off led");
+        res.json({message: "Led: OFF"});
     }
 }
