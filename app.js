@@ -13,4 +13,5 @@ module.exports = function (app) {
     });
     // Insert routes below
     app.use('/api/question', require('./api/question'));
+    app.use('/api/remote',require('./api/remoteLed'));
 }
