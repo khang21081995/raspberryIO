@@ -56,21 +56,21 @@ var callAjax = function (mode) {
     });
 }
 
-$(document).ready(function () {
-    var temp = "";
-    console.log(temp);
-    $('body').on('click', '.btnSubmit',
-        function () {
-
-            var msgElement = document.getElementById("message");
-            $.ajax({
-                url: "/api/question/addQuestion",
-                method: "POST",
-                contentType: "application/json",
-                data: data
-            }).done(function (response) {
-                console.log(response);
-                msgElement.innerHTML = response.message;
-            });
-        });
-});
+// $(document).ready(function () {
+//     var temp = "";
+//     console.log(temp);
+//     $('body').on('click', '.btnSubmit',
+//         function () {
+//
+//             var msgElement = document.getElementById("message");
+//             $.ajax({
+//                 url: "/api/question/addQuestion",
+//                 method: "POST",
+//                 contentType: "application/json",
+//                 data: data
+//             }).done(function (response) {
+//                 console.log(response);
+//                 msgElement.innerHTML = response.message;
+//             });
+//         });
+// });
