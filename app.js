@@ -8,10 +8,11 @@ module.exports = function (app) {
     app.use(bodyParser.json());
     app.get('/', function (req, res) {
         //res.end("Hello world");
+        console.log(__dirname);
         //Todo: Nhét file html làm màu vào
         res.sendFile(__dirname + "/" + "index.html");
     });
+
     // Insert routes below
-    app.use('/api/question', require('./api/question'));
-    app.use('/api/remote',require('./api/remoteLed'));
+    app.use('/api/remote', require('./api/remoteLed'));
 }

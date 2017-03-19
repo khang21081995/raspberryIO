@@ -11,10 +11,11 @@
     "debug": "~2.6.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",
-    "johnny-five": "^0.10.6",
+
     "mongoose": "^4.9.0",
     "morgan": "~1.7.0",
-    "raspi-io": "^7.2.4",
+
     "serve-favicon": "~2.3.2"
   }
 }
+

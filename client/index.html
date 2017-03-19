@@ -1,22 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This use for remote control led with PI at GPIO 13">
-    <meta name="author" content="KhangPQ">
+    <meta charset="UTF-8">
+    <meta name="author" content="Quang Khang">
+    <title> PI IO </title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js.js"></script>
+    <script type="text/javascript" src="js/callAjax.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
+    <!--?-- ============================================ --?-->
 
-    <title>Remote On/Off led at pin 13</title>
+    <style>#_no-clickjacking-0 {
+        opacity: 1 !important;
+        overflow: visible !important
+    }
 
-    <script src="js/jquery-3.2.0.min.js"></script>
-    <script src="js/callAjax.js"></script>
+    #_no-clickjacking-0 {
+        opacity: 1 !important;
+        overflow: visible !important
+    }</style>
 
 </head>
 <body>
-    <input type="button" id="btnOn" value="On" onclick="callAjax('on')"><br>
-    <input type="button" id="btnOff" value="Off" onclick="callAjax('off')">
-    <div id="message"></div>
-</body>
+<section class="promo section fp-section fp-table active" data-anchor="services" style="height: 551px;">
+    <div class="fp-tableCell" style="height: 551px;">
+        <div class="container clearfix">
+            <div class="section-title-bar">
+                <h2>
+                    Technology
+                </h2>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <ul class="services clearfix">
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="circle  flipper">
+                                        <div class="front color6">
+                                            <h2>NodeJS</h2>
+                                        </div>
+                                        <div class="back color6">
+                                            <a href="https://nodejs.org/en/">
+                                                Have largest ecosystem of open source libraries in the world</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12 ">
+                                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="circle  flipper">
+                                        <div class="front color1">
+                                            <h2>Express<br> Framework</h2>
+                                        </div>
+                                        <div class="back color1">
+                                            <a href="https://expressjs.com/" target="_blank">
+                                                Express is a minimal<br/>
+                                                and flexible Node.js<br/>
+                                                web application framework</a>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </li>
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="circle  flipper">
+                                        <div class="front color2">
+                                            <h2>Client<br> Jquery</h2>
+                                        </div>
+                                        <div class="back color2">
+                                            <a href="https://jquery.com/">
+                                                jQuery.ajax( url [, settings ] )<br>
+                                                Perform an<br>
+                                                asynchronous HTTP <br>
+                                                (Ajax) request.
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="circle  flipper">
+                                        <div class="front color3">
+                                            <h2>johnny-five</h2>
+                                        </div>
+                                        <div class="back color3">
+                                            <a href="http://johnny-five.io/">
+                                                The JavaScript<br>
+                                                Robotics & IoT Platform.
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="circle  flipper">
+                                        <div class="front color4">
+                                            <h2>raspi-io</h2>
+                                        </div>
+                                        <div class="back color4">
+                                            <a href="https://github.com/nebrius/raspi-io">
+                                                Used as an I/O plugin with Johnny-Five</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="circle  flipper">
+                                        <div class="front color5">
+                                            <h2>Wiring</h2>
+                                        </div>
+                                        <div class="back color5">
+                                            <a href="http://wiringpi.com/">
+                                                GPIO Interface library for the Raspberry Pi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--MODE-->
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div class="flip-container">
+                                    <div class="circle">
+                                        <div class="front color2">
+                                            <h2>On</h2>
+                                        </div>
+                                        <div class="back color2 text-center">
+                                            <button type="button" class="btn btn-primary btn-lg "
+                                                    onclick="callAjax('on')">On
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div class="flip-container">
+                                    <div class="circle">
+                                        <div class="front color6">
+                                            <h2>Blink</h2>
+                                        </div>
+                                        <div class="back color6 text-center">
+                                            <button type="button" class="btn btn-primary btn-lg "
+                                                    onclick="callAjax('blink')">Blink
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class=" col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div class="flip-container">
+                                    <div class="circle">
+                                        <div class="front color4">
+                                            <h2>OFF</h2>
+                                        </div>
+                                        <div class="back color4 text-center">
+                                            <button type="button" class="btn btn-primary btn-lg "
+                                                    onclick="callAjax('off')">OFF
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="section-title-bar">
+                <h1 id="message">
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+</body>
 </html>
