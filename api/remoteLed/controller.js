@@ -2,7 +2,6 @@
 
 var five = require("johnny-five");
 var Raspi = require("raspi-io");//wiring....... sudo apt-get install wiring
-npm install raspi-io -save
 var board = new five.Board({
     io: new Raspi()
 });
